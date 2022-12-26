@@ -7,8 +7,12 @@
 :root {
     font-size: 62.5%;
 
+    --bg-body: #2F2F33;
     --ff-primary: 'Roboto', sans-serif;
     --text-color: #E1E1E6;
+    --bg-table-tr: rgba(6, 22, 27, 0.5);
+    --bg-tr-odd: #06181C;
+    --color-td-remove: #F75A68;
 
     --hue: 194;
     --primary-color: #092D38;
@@ -17,7 +21,7 @@
 body {
     font-size: 1.6rem;
     color: var(--text-color);
-    background-color: #2F2F33;
+    background-color: var(--bg-body);
 }
 
 body * {
@@ -52,7 +56,9 @@ header {
 
 header img {
     width: 8rem;
-    height: 6.5rem;
+    height: 7rem;
+
+    margin-left: 0.5rem;
 }
 
 .search {
@@ -106,7 +112,7 @@ table {
     width: 100%;
     border-collapse: collapse;
 
-    box-shadow: 0.5rem 2rem 2.5rem -1rem rgba(0, 0, 0, 0.961);
+    box-shadow: 0 2rem 1.2rem -1rem rgba(0, 0, 0, 0.961);
 }
 
 table * {
@@ -121,6 +127,9 @@ table th {
     padding: 1.2rem;
 
     text-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.6);
+
+    position: sticky;
+    top: 0;
 }
 
 table th:first-child {
@@ -140,11 +149,11 @@ table td {
 }
 
 table tr {
-    background: rgba(6, 22, 27, 0.5);
+    background: var(--bg-table-tr);
 }
 
 table tr:nth-child(odd) {
-    background: #06181C;
+    background: var(--bg-tr-odd);
 }
 
 td.user {
@@ -157,7 +166,7 @@ td.user img {
     width: 2.5rem;
     height: 2.5rem;
 
-    margin: 0.5rem;
+    margin: 0.3rem;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -169,6 +178,7 @@ td.user a {
 td.user a p {
     font-weight: bold;
     font-size: 1.2rem;
+    padding: 0.2rem;
 
     text-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.6);
 }
@@ -187,10 +197,31 @@ td .remove {
     font-size: 0.9rem;
 
     padding: 0.5rem;
-    color: #F75A68;
+    color: var(--color-td-remove);
     text-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.6);
 
     cursor: pointer;
+}
+
+.table-wrapper {
+    height: 50rem;
+    
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.table-wrapper::-webkit-scrollbar {
+    width: 0.8rem;               /* width of the entire scrollbar */
+}
+  
+.table-wrapper::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);    /* color of the scroll thumb */
+    border-radius: 2rem;       /* roundness of the scroll thumb */
+    border: 0.5px solid #4A808C;  /* creates padding around scroll thumb */
 }
 
 @media(min-width: 768px) {
@@ -204,7 +235,9 @@ td .remove {
     
     header img {
         width: 20rem;
-        height: 8rem;
+        height: 5rem;
+
+        margin: 2rem 0 1rem 4.5rem;
     }
     
     .search input {
@@ -244,6 +277,9 @@ td .remove {
     
     table th:first-child {
         border-top-left-radius: .8rem;
+        text-align: left;
+
+        padding-left: 14rem;
     }
     
     table th:last-child {
@@ -254,6 +290,10 @@ td .remove {
         height: 8.5rem;
         padding: 3rem;
     }
+
+    table td:nth-child(1) {
+        text-align: start;
+    }
     
     td.user {
         gap: 4rem;
@@ -263,6 +303,8 @@ td .remove {
     td.user img {
         width: 6rem;
         height: 6rem;
+
+        justify-content: flex-start;
     }
     
     td.user a p {
