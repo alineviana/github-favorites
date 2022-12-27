@@ -175,7 +175,7 @@ td.user img {
     width: 2rem;
     height: 2rem;
 
-    margin: 0.3rem;
+    margin: 0 0 0 0.6rem;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -219,7 +219,7 @@ td .remove {
 }
 
 .table-wrapper::-webkit-scrollbar {
-    width: 0.8rem;               /* width of the entire scrollbar */
+    width: 0.5rem;               /* width of the entire scrollbar */
 }
   
 .table-wrapper::-webkit-scrollbar-track {
@@ -229,7 +229,7 @@ td .remove {
 .table-wrapper::-webkit-scrollbar-thumb {
     background-color: var(--primary-color);    /* color of the scroll thumb */
     border-radius: 2rem;       /* roundness of the scroll thumb */
-    border: 0.5px solid #4A808C;  /* creates padding around scroll thumb */
+    border: 0.3px solid #4A808C;  /* creates padding around scroll thumb */
 }
 
 @media(min-width: 768px) {
