@@ -58,7 +58,7 @@ header img {
     width: 8rem;
     height: 7rem;
 
-    margin-left: 0.5rem;
+    margin: 1rem 0 0 0.5rem;
 }
 
 .search {
@@ -81,6 +81,9 @@ header img {
 }
 
 .search button {
+    display: flex;
+    justify-content: center;
+    align-items:center;
     background-color: var(--primary-color);
     border-radius: 0 .4rem .4rem 0;
 
@@ -90,7 +93,8 @@ header img {
     font-size: 1.0rem;
     font-weight: bold;
     border: 1mm ridge rgba(212, 220, 50, 0.096);
-    padding: 0 0.1rem;
+    padding: 0 3rem 0 2rem;
+    gap: 0.5rem;
 
     color: var(--text-color);
     text-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.6);
@@ -106,6 +110,7 @@ header img {
 .search button img {
     width: 1.5rem;
     height: 1rem;
+    margin: 0.1rem 0 0.3rem 0.6rem;
 }
 
 table {
@@ -116,7 +121,7 @@ table {
 }
 
 table * {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     color: var(--text-color);
 }
 
@@ -124,7 +129,7 @@ table th {
     background-color: var(--primary-color);
     text-align: center;
     font-weight: bolder;
-    padding: 1.2rem;
+    padding: 1rem;
 
     text-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.6);
 
@@ -148,6 +153,10 @@ table td {
     text-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.6);
 }
 
+table td:nth-child(1) {
+    text-align: start;
+}
+
 table tr {
     background: var(--bg-table-tr);
 }
@@ -159,12 +168,12 @@ table tr:nth-child(odd) {
 td.user {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.1rem;
 }
 
 td.user img {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
 
     margin: 0.3rem;
     object-fit: cover;
@@ -173,19 +182,18 @@ td.user img {
 
 td.user a {
     text-decoration: none;
+    padding: 1rem;
 }
 
 td.user a p {
     font-weight: bold;
-    font-size: 1.2rem;
-    padding: 0.2rem;
+    font-size: 1rem;
 
     text-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.6);
 }
 
 td.user a span {
-    font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.9rem;
 
     text-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.6);
 }
@@ -194,9 +202,9 @@ td .remove {
     background: none;
     border: none;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 
-    padding: 0.5rem;
+    padding: 0.6rem;
     color: var(--color-td-remove);
     text-shadow: 0.1rem 0.3rem 0.4rem rgba(0, 0, 0, 0.6);
 
@@ -237,7 +245,7 @@ td .remove {
         width: 20rem;
         height: 5rem;
 
-        margin: 2rem 0 1rem 4.5rem;
+        margin: 2.5rem 0 1rem 4.5rem;
     }
     
     .search input {
@@ -250,11 +258,9 @@ td .remove {
     .search button {    
         width: 20rem;
         height: 5rem;
-
-        display: flex;
-        align-items: center;
+       
         font-size: 1.5rem;
-        gap: 1rem;
+        gap: 1.5rem; 
     }
     
     .search button img {
