@@ -1,10 +1,10 @@
 # GitFav | Projeto 11 - Programa Explorer da Rocketseat
 
-<img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-green">
-
-<br>
-
 - Desenvolvendo uma aplicação para marcação dos favoritos do GitHub.
+
+<img src="./assets/preview.png" width=550> <img src="./assets/preview1.png" height=258>
+
+Clique [AQUI](https://alineviana.github.io/github-favorites/) para acessar o projeto
 
 <br>
 
@@ -12,14 +12,21 @@
 <br>
 
 - Construindo tabelas no HTML
-- Definindo acessibilidade com sr-only
-- Classes e herança no JS
+- Definindo acessibilidade com Screen Reader Only
+- Conceitos da POO
+- Classes
+- Herança
+- Polimorfismo
 - Criando HTML com JavaScript
 - Imutabilidade para trabalhar com os dados da aplicação
 - LocalStorage
 - Métodos estáticos e promessas
-- Promessas com Async Await
+- Async Await
 - Cuidando do fluxo da aplicação com try, catch, throw
+- API
+- fetch()
+- Desestruturação no JavaScript
+- Método filter()
 
 <br>
 
