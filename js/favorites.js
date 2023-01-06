@@ -13,7 +13,7 @@ export class Favorites {
   }
 
   save() {
-    localStorage.setItem('@github-favorites:', JSON.stringify(this.entries))
+    localStorage.setItem('@github-favorites:', JSON.stringify(this.entries));
   }
 
   async add(username) {
@@ -26,12 +26,13 @@ export class Favorites {
       }
 
       const user = await GithubUser.search(username);
-
+      
       if (user.login === undefined) {
         throw new Error("Usuário não encontrado!");
       }
 
       this.entries = [user, ...this.entries];
+      this.save();
       this.update();
 
     } catch (error) {
@@ -59,6 +60,7 @@ export class FavoritesView extends Favorites {
 
     this.update();
     this.onAdd();
+    this.onClickEnter();
   }
 
   onAdd() {
@@ -68,6 +70,21 @@ export class FavoritesView extends Favorites {
 
       this.add(value);
     };
+  }
+
+  onClickEnter() {
+    const input = this.root.querySelector(".search input");
+
+    input.addEventListener("keypress", function(e) {
+
+      if (e.key === "Enter") {
+        e.preventDefault()
+        const addButton = document.querySelector(".search .button-favorite");
+        addButton.onclick.apply(addButton);
+
+        input.value = '';
+      }
+    })
   }
 
   update() {
