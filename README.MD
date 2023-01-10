@@ -2,9 +2,9 @@
 
 - Desenvolvendo uma aplicação para marcação dos favoritos do GitHub.
 
-<img src="./assets/preview.png" width=550> <img src="./assets/preview1.png" height=258>
+<img src="./assets/githubFavorite.gif" width=550>
 
-Clique [AQUI](https://alineviana.github.io/github-favorites/) para acessar o projeto
+✨ Clique [AQUI](https://alineviana.github.io/github-favorites/) para acessar o projeto
 
 <br>
 
